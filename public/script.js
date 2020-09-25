@@ -1,8 +1,10 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-const myPeer = new Peer({
-  host: '/',
-  port: '3001'
+const myPeer = new Peer(undefined, {
+  secure: true,
+  host: 'pkoom-zlhmo.run.goorm.io',
+  port: '3000',
+  path: 'peerjs/myapp'
 })
 const myVideo = document.createElement('video')
 myVideo.muted = true
